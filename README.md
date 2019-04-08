@@ -1,4 +1,7 @@
 # PersonalBlockchain
+This is the frond-end part for [Luiz's](https://github.com/LHSV) and my undergraduate thesis.
+
+You can read my thesis at https://github.com/NathanGavenski/personal-blockchain-thesis
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
