@@ -1,0 +1,34 @@
+app-share-modal {
+  position: fixed;
+  align-self: center;
+  left: 40%;
+  top: 50%;
+}
+
+.card {
+  width: 27rem;
+
+  .error-message {
+    color: red;
+    margin: 0;
+  }
+
+  .successful-message {
+    color: green;
+    margin: 0;
+  }
+
+  .btn {
+    margin-top: 0.5rem;
+    margin-left: 1.2rem;
+  }
+}
+
+.backdrop-fade {
+  height: 10000px;
+  position: fixed;
+  width: 10000px;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}

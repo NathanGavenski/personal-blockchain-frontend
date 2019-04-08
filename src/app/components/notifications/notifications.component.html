@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div *ngIf="notificationService.getNonDeletedNotifications().length > 0" class="notification-list">
+    <h2>Lista de <strong>notificações</strong></h2>
+    <div *ngFor="let notification of notificationService.userNotifications.getValue()" class="notification">
+      <div  *ngIf="!notification.deleted"
+            class="card" 
+            [ngClass]="{ 'bg-light' : notification.read, 'border-dark' : !notification.read }">
+        <div class="card-header">
+          <span class="from-text">
+            <fa-icon [icon]="!notification.read ? envelope : envelopeOpen"></fa-icon>
+            De: {{ (notification.from === "system") ? "Sistema" : notification.from }}
+          </span>
+          <span class="time">{{ notification.time }}</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"> Mensagem: </h5>
+          <p class="card-text">{{ notification.text }}</p>
+          <div class="button-group">
+            <button *ngIf="!notification.read" id="markAsRead" type="button" (click)="changeNotificationStatus(notification.id)" class="btn btn-primary">
+              Marcar como lida
+            </button>
+            <button type="button" id="markAsDeleted" class="btn btn-danger" (click)="deleteNotification(notification.id)">Excluir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="notificationService.getNonDeletedNotifications().length === 0" class="notifications-msg">
+    <h3>Você não tem notificações :C</h3>
+  </div>
+</div>

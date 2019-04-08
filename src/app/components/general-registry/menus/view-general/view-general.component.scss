@@ -1,0 +1,66 @@
+@import "../../../share-modal/share-modal.component.scss";
+
+h1 {
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.view {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .card {
+    min-width: 75%;
+
+    .pointer {
+      cursor: pointer;
+    }
+  }
+
+  .buttons {
+    margin-top: 1.6rem;
+  }
+
+  .btn {
+    width: 150px !important;
+  }
+
+  .btn-primary {
+    margin-right: 1.2rem;
+  }
+
+  .shared-doc {
+    display: flex;
+    margin-top: 1.2rem;
+    align-items: center;
+    flex-direction: column;
+
+    .card {
+      min-width: 75%;
+
+      .card-body {
+        cursor: default;
+      }
+    }
+
+    .buttons {
+      margin-top: 1.6rem;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .btn {
+      width: 150px !important;
+    }
+  
+    .btn-primary {
+      margin-right: 1.2rem;
+    }
+  }
+
+  .shared-doc:last-child {
+    padding-bottom: 1.2rem;
+  }
+}

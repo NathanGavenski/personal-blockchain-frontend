@@ -1,0 +1,37 @@
+<div class="bg-image">
+    <div id="login" class="container fill center">
+        <div id="content" class="card">
+            <div id="titleDiv" class="row align-items-center">
+                <div id="loginTitle" class="col-md-12 text-center"><h1>Login</h1></div>
+            </div> <!--End title-->
+            <div id="form" class="row justify-content-center">
+                <div class="col-md-8 col-sm-12">
+                    <form name="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Endereço de e-mail:</label>
+                            <input  type="email" id="login" class="form-control" required 
+                                    autocomplete="email" placeholder="exemplo@email.com.br"
+                                    [(ngModel)]="user.mail" name="mail" #mail="ngModel">
+                            <div [hidden]="mail.valid || mail.pristine" class="alert alert-danger" role="alert">
+                                E-mail é obrigatório
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  for="loginPassword">Senha:</label>
+                            <input  type="password" id="password" class="form-control"  required
+                                    autocomplete="current-password" placeholder="********"
+                                    [(ngModel)]="user.password" name="password" #password="ngModel">
+                            <div [hidden]="password.valid || password.pristine" class="alert alert-danger" role="alert">
+                                Senha é obrigatório
+                            </div>
+                        </div>
+                        <button id="loginButton" type="submit" (click)="login(user)" 
+                                class="btn btn-success" value="Confirmar">Confirmar</button>
+                        <button id="register" type="button" (click)="signup(user)" 
+                                class="btn btn-secondary" value="Cadastrar">Cadastrar</button>
+                    </form>
+                </div>
+            </div> <!--End Form-->
+        </div> <!--End Content-->
+    </div> <!--End Container-->
+</div>

@@ -1,0 +1,19 @@
+Dificuldades:
+    ☐ Passagem de objetos complexos: structures, lista de strings, tuplas
+    ☐ Serialização e Deserialização
+    ☐ Deploy dos contratos é necessário cada vez que subimos o blockchain fazendo com que os endereços dos mesmos mudem e no caso de possível alteração suas ABIs também. Fazendo o processo de desenvolvimento mais complexo.
+    ☐ Imports como redes privadas não tem acesso a redes comuns é preciso baixar os contratos e subir eles junto com o blockchain o que causa risco de falta de atualizações de segurança por exemplo
+    ☐ Processos de deploy, como os detentores do blockchain tem acesso sobre
+    ☐ Linguagem ainda em desenvolvimento, muita coisa ainda está em desenvolvimento o que nos forçou a trabalhar de formas diferentes para coisas mais naturais em outras linguagens. Ex iteração sobre um mapa de valores.
+    ☐ Componentes web ainda estão em desenvolvimento, o que faz com que as últimas versões não sejam confiáveis
+    ☐ Determinístico vs não determinístico
+    ☐ Custo de processamento dentro do blockchain (client side é fraco em segurança)
+    ☐ Super difícil de de debbugar
+
+    ganache-cli --db [foldername]
+    ele vai salvar todo o historico aqui e depois carregar daqui quando for iniciar de novo.
+
+    Comando ganache
+        ganache-cli --db="./save" -i="5777" -d --mnemonic="candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
+
+    "ZJ4B4pUT1ZVkI8tRP5fUwMjG28C2" "Nome do pai" "Nome da mãe" "6/11/2018" "01234567890" "09876543210" "C:\fakepath\bebe.jpg" "Brasileira"

@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-image {
+  height: 100%;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+app-general-registry {
+  display: flex;
+  min-height: -webkit-fill-available;
+  flex-direction: column;
+  flex: 2;
+}
+
+app-birth-certification {
+  display: flex;
+  min-height: -webkit-fill-available;
+  flex-direction: column;
+  flex: 2;
+}
+
+app-notifications {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+app-login {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+app-register {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}

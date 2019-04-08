@@ -1,0 +1,53 @@
+.container {
+  flex: 2;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+
+  h2 {
+    padding-top: 1.6rem;
+  }
+
+  .notification-list {
+    width: 100%;
+
+    .notification {
+      padding-top: 1.2rem;
+
+      .card-header {
+        display: flex;
+        justify-content: center;
+
+        .from-text {
+          fa-icon {
+            margin-right: 0.5rem;
+          }
+        }
+
+        .time {
+          display: flex;
+          flex-grow: 1;
+          justify-content: flex-end;
+        }
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: flex-end;
+
+        .btn:last-child {
+          margin-left: 1.2rem;
+        }
+      }
+    }
+
+    .notification:last-child {
+      padding-bottom: 1.2rem;
+    }
+  }
+
+  .notifications-msg {
+    align-self: center;
+  }
+}

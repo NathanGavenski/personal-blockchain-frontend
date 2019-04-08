@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+}
+
+.son:last-child {
+    padding-bottom: 1.6rem;
+}
+.son {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 1.6rem;
+    .card {
+        min-width: 75%;
+    }
+
+    .buttons {
+        margin-top: 1.6rem;
+    }
+
+    .btn {
+        width: 150px !important;
+    }
+
+    .btn-primary {
+        margin-right: 1.2rem;
+    }
+}

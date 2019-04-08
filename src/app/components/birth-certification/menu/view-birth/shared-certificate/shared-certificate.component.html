@@ -1,0 +1,27 @@
+<div class="son">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ shared.name }} {{ shared.lastName }}</h5>
+      <div class="row">
+        <p class="card-text col-6"><strong>Pai:</strong> {{ shared.fathersName }}</p>
+        <p class="card-text col-6"><strong>Mãe:</strong> {{ shared.mothersName }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text col-6"><strong>Hospital:</strong> {{ shared.hospitalName }}</p>
+        <p class="card-text col-6"><strong>Cidade:</strong> {{ shared.cityOfBirth }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text col-6"><strong>Avô paterno:</strong> {{ shared.fathersGrandfathersName }}</p>
+        <p class="card-text col-6"><strong>Avó paterna:</strong> {{ shared.fathersGrandmothersName }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text col-6"><strong>Avô materno:</strong> {{ shared.mothersGrandfathersName }}</p>
+        <p class="card-text col-6"><strong>Avó materna:</strong> {{ shared.mothersGrandmothersName }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text" style="margin-left: 15px;">
+          <strong>Data do nascimento:</strong> {{ transformDate(shared.birthDate) }}</p>
+      </div>
+    </div>
+  </div>
+</div>

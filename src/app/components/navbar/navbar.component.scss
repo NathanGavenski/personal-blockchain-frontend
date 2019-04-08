@@ -1,0 +1,44 @@
+.bd-sidebar {
+    background: lightgray;
+    border-right: 6px solid red;
+    height: 100%;
+}
+
+.navbar-brand img {
+    margin-top: 30px;
+}
+
+.right-icons {
+    margin-left: 15px;
+}
+
+.right-links {
+    margin-right: 15px;
+    font-weight: 400;
+    font-size: large;
+}
+
+.last-icon {
+    margin-right: 30px;
+    margin-left: 28px;
+}
+
+.fa-stack[data-count]:after{
+    position:absolute;
+    left:1.5rem;
+    top:1.5rem;
+    content: attr(data-count);
+    font-size:60%;
+    padding:.6em;
+    border-radius:999px;
+    line-height:.75em;
+    color: white;
+    background:rgba(255,0,0,.85);
+    text-align:center;
+    min-width:2em;
+    font-weight:bold;
+  }
+
+  .icon-pointer {
+      cursor: pointer;
+  }

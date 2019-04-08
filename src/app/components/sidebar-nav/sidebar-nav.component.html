@@ -1,0 +1,7 @@
+<aside class="vertical-menu">
+    <a  *ngIf="!activateSon" id="normal-activate" [routerLink]="['activate']"
+        [ngClass]="{'deactivate' : !activate && alreadyHave}" class="sidebar button">Adicionar</a>
+    <a  *ngIf="activateSon" id="son-activate" [routerLink]="['activate-son']" class="sidebar button">Adicionar</a>
+    <a [routerLink]="['view']" id="view" [ngClass]="{'deactivate' : activate && activateSon }" class="sidebar button">Visualizar</a>
+    <a [routerLink]="['renew']" id="renew" [ngClass]="{'deactivate' : activate && activateSon }" class="sidebar button">Renovar</a>
+</aside>

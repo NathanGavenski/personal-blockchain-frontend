@@ -1,0 +1,30 @@
+#content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  
+    .warning {
+      padding-top: 1.6rem;
+      padding-left: 10%;
+    }
+    #general-form {
+      margin-top: 1.6rem;
+      padding: 10px 10%;
+      .photo {
+        display: flex;
+        flex-direction: column;
+        label {
+          margin: 0px;
+          margin-bottom: .5rem;
+        }
+        #photo {}
+      }
+      .btn {
+        margin-top: 1.6rem;
+        padding: 5px 20px;
+      }
+      .btn-secondary {
+        margin-right: 1.6rem;
+      }
+    }
+  }

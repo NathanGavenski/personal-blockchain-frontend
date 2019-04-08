@@ -1,0 +1,33 @@
+<div class="son">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ son.name }} {{ son.lastName }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Status documento: {{ son.status ? 'Ativo' : 'Desativo' }}</h6>
+      <div class="row">
+        <p class="card-text col-6"><strong>Pai:</strong> {{ son.fathersName }}</p>
+        <p class="card-text col-6"><strong>Mãe:</strong> {{ son.mothersName }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text col-6"><strong>Hospital:</strong> {{ son.hospitalName }}</p>
+        <p class="card-text col-6"><strong>Cidade:</strong> {{ son.cityOfBirth }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text col-6"><strong>Avô paterno:</strong> {{ son.fathersGrandfathersName }}</p>
+        <p class="card-text col-6"><strong>Avó paterna:</strong> {{ son.fathersGrandmothersName }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text col-6"><strong>Avô materno:</strong> {{ son.mothersGrandfathersName }}</p>
+        <p class="card-text col-6"><strong>Avó materna:</strong> {{ son.mothersGrandmothersName }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text" style="margin-left: 15px;">
+          <strong>Data do nascimento:</strong> {{ transformDate(son.birthDate) }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!hideButtons" class="buttons">
+    <button (click)="activate()" type="button" class="btn btn-primary">Ativar</button>
+    <button (click)="deactivate()" type="button" class="btn btn-secondary">Negar</button>
+  </div>
+</div>

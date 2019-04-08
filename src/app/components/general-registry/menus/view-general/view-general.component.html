@@ -1,0 +1,59 @@
+<div *ngIf="document.fathersName" class="view container">
+  <h1 *ngIf="!hideButtons">Seu documento</h1>
+  <div id="general-registry-card" class="card">
+    <div class="card-body" [ngClass]="{'pointer': !hideButtons}" (click)="!hideButtons && shareDocument()">
+      <h5 class="card-title">{{ user.name }} {{ user.lastName }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Status documento: {{ status ? 'Ativo' : 'Desativo' }}</h6>
+      <div class="row">
+        <p class="card-text col-6"><strong>Pai:</strong> {{ document.fathersName }}</p>
+        <p class="card-text col-6"><strong>Mãe:</strong> {{ document.mothersName }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text col-6"><strong>PIS:</strong> {{ document.pis }}</p>
+        <p class="card-text col-6"><strong>CPF:</strong> {{ document.cpf }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text col-6"><strong>Nacionalidade:</strong> {{ document.nationality }}</p>
+        <p class="card-text col-6"><strong>Licença de casamento:</strong> {{ document.marriedLicense }}</p>
+      </div>
+      <div class="row">
+        <p class="card-text" style="margin-left: 15px;"><strong>Data de emissão:</strong> {{ transformDate(document.creationDate) }}</p>
+      </div>
+    </div>
+    <!--card-body-->
+  </div>
+  <!--card-->
+
+  <div *ngIf="!hideButtons" class="buttons">
+    <button (click)="activate()" type="button" class="btn btn-primary">Ativar</button>
+    <button (click)="deactivate()" type="button" class="btn btn-secondary">Negar</button>
+  </div>
+
+  <div *ngIf="!hideButtons" style="width: 100%;">
+    <h1 *ngIf="sharedDocuments.length > 0">Documentos Compartilhados</h1>
+    <div class="shared-doc" *ngFor="let shared of sharedDocuments">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ shared.name }} {{ shared.lastName }}</h5>
+          <div class="row">
+            <p class="card-text col-6"><strong>Pai:</strong> {{ shared.fathersName }}</p>
+            <p class="card-text col-6"><strong>Mãe:</strong> {{ shared.mothersName }}</p>
+          </div>
+          <div class="row">
+            <p class="card-text col-6"><strong>PIS:</strong> {{ shared.pis }}</p>
+            <p class="card-text col-6"><strong>CPF:</strong> {{ shared.cpf }}</p>
+          </div>
+          <div class="row">
+            <p class="card-text col-6"><strong>Nacionalidade:</strong> {{ shared.nationality }}</p>
+            <p class="card-text col-6"><strong>Licença de casamento:</strong> {{ shared.marriedLicense }}</p>
+          </div>
+          <div class="row">
+            <p class="card-text" style="margin-left: 15px;"><strong>Data de emissão:</strong> {{ transformDate(shared.creationDate) }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-share-modal *ngIf="showModal" [documentService]="generalService" [document]="tokenId" (dismissShareModal)="cancel()"></app-share-modal>

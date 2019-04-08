@@ -1,0 +1,6 @@
+<app-navbar></app-navbar>
+<h2 *ngIf="generalTitle" id="general-title">Registro Geral</h2>
+<app-view-general (documentTitleController)="hideGeneralTitle($event)" hideButtons="{{ true }}"></app-view-general>
+<h2 *ngIf="birthTitle" id="birth-title">Certidão de Nascimento</h2>
+<app-view-birth (documentTitleController)="hideBirthTitle($event)" hideButtons="{{ true }}">
+</app-view-birth>

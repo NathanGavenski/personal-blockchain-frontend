@@ -1,0 +1,17 @@
+h2 {
+  padding-top: 3.6rem;
+  text-align: center;
+}
+
+::ng-deep
+app-view-birth {
+  .container {
+    .view {
+      padding-top: 0 !important ;
+    }
+  }
+}
+
+.card-body {
+  cursor: default !important;
+}

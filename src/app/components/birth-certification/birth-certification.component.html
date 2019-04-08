@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<div id="birth-registry">
+  <app-sidebar-nav [activate]="activate" [alreadyHave]="alreadyHave" [activateSon]="activateSon" [path]="path"></app-sidebar-nav>
+  <router-outlet *ngIf="!route"></router-outlet>
+  <div *ngIf="route" class="loader-content">
+    <div class="loader"></div>
+  </div>
+</div>

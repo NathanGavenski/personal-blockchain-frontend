@@ -1,0 +1,12 @@
+<div class="backdrop-fade"></div>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Compartilhar documento</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Digite o identificador no campo</h6>
+    <input type="text" class="form-control" [(ngModel)]="recipientId">
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    <p *ngIf="successfulMessage" class="successful-message"> {{ successfulMessage }}</p>
+    <button (click)="cancel()" id="cancel" type="button" class="btn btn-danger float-right">Cancelar</button>
+    <button (click)="share()" id="share" type="button" class="btn btn-primary float-right">Compartilhar</button>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+    "STANDARD": {
+        "STANDARD_CREATE_SUCCESS": "Seu Registro Padrao foi criado com sucesso!",
+        "STANDARD_UPDATE_SUCESS": "Seu Registro Padrao foi atualizado com sucesso!"
+    },
+    "GENERAL": {
+        "GENERAL_CREATE_SUCCESS":"Seu Registro Geral (RG) foi criado com sucesso!",
+        "GENERAL_CREATE_FAILURE": "Seu Registro Geral (RG) não foi criado.\n Verifique que seus dados foram preenchidos corretamente e seu registro padrão está ativo.",
+        "GENERAL_UPDATE": "Registro Geral (RG) atualizado com sucesso!",
+        "GENERAL_NEGATE": "Seu Registro Geral (RG) foi negado.\n Verifique que seus dados foram preenchidos corretamente e seu registro padrão está ativo.",
+        "GENERAL_APPROVE": "Seu Registro Geral (RG) foi criado com aprovado!",
+        "GENERAL_SHARE": "Gostaria de compartilhar meu Registro Geral (RG) contigo!"
+    },
+    "BIRTH": {
+        "BIRTH_CREATE_SUCCESS": "Sua Certidao de Nascimento foi criada com sucesso!",
+        "BIRTH_CREATE_FAILURE": "Sua Certidao de Nascimento não foi criada.\n Verifique que seus dados foram preenchidos corretamente e seu registro padrão está ativo.",
+        "BIRTH_UPDATE_SUCCESS": "Sua Certidao de Nascimento foi atualizada com sucesso!",
+        "BIRTH_UPDATE_FAILURE": "Sua Certidao de Nascimento não foi atualizada.\n Verifique que seus dados foram preenchidos corretamente e seu registro padrão está ativo.",
+        "BIRTH_SON_CREATE_SUCCESS": "A Certidao de Nascimento foi criada com sucesso!",
+        "BIRTH_SON_CREATE_FAILURE": "A Certidao de Nascimento não foi criada. Se o problema persistir entre em contato.",
+        "BIRTH_NEGATE": "Sua Certidao de Nascimento foi negada.\n Verifique que seus dados foram preenchidos corretamente e seu registro padrão está ativo.",
+        "BIRTH_APPROVE": "Sua Certidao de Nascimento foi aprovada!",
+        "BIRTH_SHARE": "Gostaria de compartilhar minha Certidao de Nascimento contigo!"
+
+    }
+}

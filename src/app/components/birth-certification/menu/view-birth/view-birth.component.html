@@ -1,0 +1,47 @@
+<div class="container">
+  <div *ngIf="document.fathersName" class="view">
+    <h1 *ngIf="!hideButtons">Seu documento</h1>
+    <div class="card" (click)="!hideButtons && shareDocument()">
+      <div id="birth-certificate-card" class="card-body" [ngClass]="{'pointer': !hideButtons}">
+        <h5 class="card-title">{{ user.name }} {{ user.lastName }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Status documento: {{ status ? 'Ativo' : 'Desativo' }}</h6>
+        <div class="row">
+          <p class="card-text col-6"><strong>Pai:</strong> {{ document.fathersName }}</p>
+          <p class="card-text col-6"><strong>Mãe:</strong> {{ document.mothersName }}</p>
+        </div>
+        <div class="row">
+          <p class="card-text col-6"><strong>Hospital:</strong> {{ document.hospitalName }}</p>
+          <p class="card-text col-6"><strong>Cidade:</strong> {{ document.cityOfBirth }}</p>
+        </div>
+        <div class="row">
+          <p class="card-text col-6"><strong>Avô paterno:</strong> {{ document.fathersGrandfathersName }}</p>
+          <p class="card-text col-6"><strong>Avó paterna:</strong> {{ document.fathersGrandmothersName }}</p>
+        </div>
+        <div class="row">
+          <p class="card-text col-6"><strong>Avô materno:</strong> {{ document.mothersGrandfathersName }}</p>
+          <p class="card-text col-6"><strong>Avó materna:</strong> {{ document.mothersGrandmothersName }}</p>
+        </div>
+        <div class="row">
+          <p class="card-text" style="margin-left: 15px;"><strong>Data do nascimento:</strong> {{ transformDate(document.birthDate) }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!hideButtons" class="buttons">
+      <button (click)="activateDoc()" type="button" class="btn btn-primary">Ativar</button>
+      <button (click)="deactivateDoc()" type="button" class="btn btn-secondary">Negar</button>
+    </div>
+  </div>
+
+  <div *ngIf="!hideButtons && document.sons" class="view">
+    <h1>Documentos responsáveis:</h1>
+    <app-guardian-certificate *ngFor="let son of document.sons" [son]="son"></app-guardian-certificate>
+  </div>
+
+  <div *ngIf="sharedDocuments && !hideButtons" class="view shared-view">
+    <h1>Documentos compartilhados:</h1>
+    <app-shared-certificate *ngFor="let share of sharedDocuments" [shared]="share"></app-shared-certificate>
+  </div>
+</div>
+
+<app-share-modal *ngIf="showModal" [documentService]="birthService" [document]="tokenId" (dismissShareModal)="cancel()"></app-share-modal>

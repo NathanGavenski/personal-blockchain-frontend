@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top: 60px">
+    <form>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Name:</label>
+            <input  type="text" class="col form-control"
+                    [formControl]="formGroup.get('name')" 
+                    name="name" readonly>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="exampleFormControlInput1">Sobrenome:</label>
+              <input  type="text" class="col form-control" name="lastName" 
+                      [formControl]="formGroup.get('familyName')" readonly>
+          </div>
+        </div> <!--Col-->
+     </div> <!--Row-->
+
+     <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Telefone:</label>
+            <input  type="text" class="col form-control" name="telephone"
+                    [formControl]="formGroup.get('phone')" readonly>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="exampleFormControlInput1">Data de nascimento:</label>
+              <input  type="text" class="col form-control" name="birthday"
+                      [formControl]="formGroup.get('birthDate')" readonly>
+          </div>
+        </div> <!--Col-->
+     </div> <!--Row-->
+
+     <div class="row">
+        <div class="col-md-8">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Endereço:</label>
+            <input  type="text" class="col form-control" name="address" 
+                    [formControl]="formGroup.get('add')" readonly>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+              <label for="exampleFormControlInput1">Complemento:</label>
+              <input  type="text" class="col form-control" name="addressNumber"
+                      [formControl]="formGroup.get('add_comp')" readonly>
+          </div>
+        </div> <!--Col-->
+     </div> <!--Row-->
+
+     <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Cidade:</label>
+            <input  type="text" class="col form-control" name="city"
+                    [formControl]="formGroup.get('city')" readonly>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+              <label for="exampleFormControlInput1">Estado:</label>
+              <input  type="text" class="col form-control" name="state"
+                      [formControl]="formGroup.get('state')" readonly>
+          </div>
+        </div> <!--Col-->
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">CEP:</label>
+                <input  type="text" class="col form-control" name="zip"
+                        [formControl]="formGroup.get('zip')" readonly>
+            </div>
+          </div> <!--Col-->
+     </div> <!--Row-->
+
+     <div class="row" style="height: 140.2px;">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">E-mail:</label>
+            <input  type="text" class="col form-control" name="mail"
+                    [formControl]="formGroup.get('mail')" readonly>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="inputPassword">Senha:</label>
+              <input  type="password" class="col form-control" id="inputPassword" name="password" readonly>
+              <small id="passwordHelp" class="form-text text-muted" hidden>A senha deve conter de 8-13 digitos.</small>
+              <div class="form-check form-control-sm">
+                  <input class="form-check-input" type="checkbox" id="gridCheck" (click)="passwordTypeChange()"> 
+                  <label class="form-check-label" for="gridCheck"> Ver senha </label>
+              </div> <!--checkbox-->
+          </div>
+        </div> <!--Col-->
+     </div> <!--Row-->
+    
+    <button type="button" id="firstButton" (click)="enableUpdate()" class="btn btn-success float-right" 
+            value="habilitar" style="margin-left: 15px">Habilitar campos</button>
+    <button type="button" id="buttonAlter" (click)="update()" class="btn btn-secondary float-right" 
+            value="habilitar" disabled hidden>Alterar dados</button>
+    </form> <!--Form-->
+  </div> <!--Container-->

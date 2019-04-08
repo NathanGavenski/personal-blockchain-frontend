@@ -1,0 +1,55 @@
+@import "../../../share-modal/share-modal.component.scss";
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+
+  .view {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: min-content;
+    padding-top: 1.6rem;
+
+    .card {
+      min-width: 75%;
+
+      .pointer {
+        cursor: pointer;
+      }
+    }
+
+    .buttons {
+      margin-top: 1.6rem;
+    }
+
+    .btn {
+      width: 150px !important;
+    }
+
+    .btn-primary {
+      margin-right: 1.2rem;
+    }
+  }
+
+  .shared-view {
+    padding-bottom: 1.2rem;
+  }
+}
+
+::ng-deep
+app-guardian-certificate {
+  min-width: 100%;
+}
+
+::ng-deep
+app-shared-certificate {
+  min-width: 75%;
+}

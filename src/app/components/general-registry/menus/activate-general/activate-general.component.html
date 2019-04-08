@@ -1,0 +1,59 @@
+<div id="content" class="container">
+  <div class="warning">
+    <h4>Preencha os dados abaixo<br>Crie seu primeiro <strong>Registro Geral</strong> eletrônico.</h4>
+    <p>Ao criar o seu documento ele ficará pendente até que as informações sejam validadas.</p>
+  </div>
+  <div id="general-form">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputName">Nome</label>
+        <input type="text" class="form-control" id="inputName" [(ngModel)]="user.name" name="name" #name="ngModel" placeholder="Primeiro nome">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputLastName">Sobrenome</label>
+        <input type="text" class="form-control" id="inputLastName" [(ngModel)]="user.lastName" name="lastName" #name="ngModel" placeholder="Sobrenome">
+      </div>
+    </div>
+    <form [formGroup]="formGroup">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputName">Nome do pai</label>
+          <input type="text" class="form-control" id="inputFathersName" [formControl]="formGroup.get('fathersName')"
+            placeholder="Nome do pai">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Nome da mãe</label>
+          <input type="text" class="form-control" id="inputMothersName" [formControl]="formGroup.get('mothersName')"
+            placeholder="Nome da mãe">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputName">CPF</label>
+          <input type="text" class="form-control" id="inputCPF" [formControl]="formGroup.get('cpf')" placeholder="CPF">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">PIS</label>
+          <input type="text" class="form-control" id="inputPIS" [formControl]="formGroup.get('pis')" placeholder="PIS">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Nacionalidade</label>
+          <input type="text" class="form-control" id="inputNationality" [formControl]="formGroup.get('nationality')"
+            placeholder="Nacionalidade">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Licença de casamento</label>
+          <input type="text" class="form-control" id="inputMarriedLicense" [formControl]="formGroup.get('marriedLicense')"
+            placeholder="Licença de casamento">
+        </div>
+      </div>
+    </form>
+
+    <button id="create-button" type="button" class="btn btn-secondary" [disabled]="formGroup.invalid" (click)="create()">Criar</button>
+    <button type="button" class="btn btn-primary" (click)="teste2()">Teste</button>
+  </div>
+</div>

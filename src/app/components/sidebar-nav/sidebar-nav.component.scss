@@ -1,0 +1,34 @@
+.vertical-menu {
+  display: inline-block;
+  background-color: #343A40;
+  width: 200px;
+  height: 100%;
+}
+
+.vertical-menu a {
+  color: rgba(255, 255, 255, .5);
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, .5);
+}
+
+.vertical-menu a:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.vertical-menu a.deactivate {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: rgba(255, 255, 255, .2);
+}
+
+.vertical-menu a.button:hover {
+  background-color: #68747F;
+}
+
+.vertical-menu a.active {
+  background-color: #41607F;
+  color: white;
+}
